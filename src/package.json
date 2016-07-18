@@ -1,0 +1,13 @@
+{
+  "name": "NICE-Tech-Radar",
+  "version": "0.0.1",
+  "description": "Technology Radar",
+  "author": "First Last <first.last@example.com>",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
