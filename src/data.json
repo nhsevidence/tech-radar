@@ -1,0 +1,114 @@
+{
+    "categories" : [
+          { 
+            "name" : "Languages and Frameworks",
+            "values" : [
+                { 
+                    "name" : "C#",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                },  
+                { 
+                    "name" : "F#",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                },      
+                { 
+                    "name" : ".NET MVC",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                },  
+                { 
+                    "name" : "NodeJS",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                },
+                { 
+                    "name" : "Meteor",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                }, 
+                { 
+                    "name" : "SQL Server",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                }, 
+                { 
+                    "name" : "Fast ESP",
+                    "status" : "Retiring",
+                    "desc" : "Something goes here"
+                }, 
+                { 
+                    "name" : "ElasticSearch",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                }, 
+                 { 
+                    "name" : "RavenDB",
+                    "status" : "?",
+                    "desc" : "Something goes here"
+                }, 
+                 { 
+                    "name" : "MongoDB",
+                    "status" : "?",
+                    "desc" : "Something goes here"
+                }, 
+                 { 
+                    "name" : "SPARQL/RDF/OW",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                }, 
+                 { 
+                    "name" : "Rabbit MQ",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                }
+              ]
+          }, 
+          {
+          "name" : "Platforms and Infrastructure",
+            "values" : [
+                { 
+                    "name" : "AWS",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Docker",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Linux",
+                    "status" : "?",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Mono",
+                    "status" : "?",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Windows",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Rancher",
+                    "status" : "Trialling",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "Teamcity",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                },
+                 { 
+                    "name" : "OctoDeploy",
+                    "status" : "Adopted",
+                    "desc" : "Something goes here"
+                }
+            ]
+          }
+    ]
+}
