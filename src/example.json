@@ -1,0 +1,52 @@
+{
+    "status" : [
+        { 
+            "id" : 1,
+            "name" : "Assessing"
+        }
+        { 
+            "id" : 2,
+            "name" : "Trialling"
+        }
+        { 
+            "id" : 3,
+            "name" : "Adopted"
+        }
+        { 
+            "id" : 4,
+            "name" : "Retiring"
+        }
+    ],
+    "categories" : [
+          { 
+            "name" : "Languages and Frameworks",
+            "values" : [
+                { 
+                    "name" : "C#",
+                    "status" : 3,
+                    "desc" : "Something goes here"
+                },  
+                { 
+                    "name" : "F#",
+                    "status" : 2,
+                    "desc" : "Something goes here"
+                },      
+              ]
+          }
+          { 
+            "name" : "Platforms",
+            "values" : [
+                { 
+                    "name" : "Amazon Web Services",
+                    "status" : 3,
+                    "desc" : "Something goes here"
+                },  
+                { 
+                    "name" : "Docker",
+                    "status" : 2,
+                    "desc" : "Something goes here"
+                },      
+              ]
+          }
+    ]
+}
