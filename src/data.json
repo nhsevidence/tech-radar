@@ -2,6 +2,7 @@
     "categories" : [
           { 
             "name" : "Languages and Frameworks",
+            "slugName": "languages-and-frameworks",
             "values" : [
                 { 
                     "name" : "C#",
@@ -67,6 +68,7 @@
           }, 
           {
           "name" : "Platforms and Infrastructure",
+          "slugName": "platforms-and-infrastructure",
             "values" : [
                 { 
                     "name" : "AWS",

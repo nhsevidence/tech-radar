@@ -1,0 +1,7 @@
+extend layout
+block content
+ h1 NICE Tech Radar 
+ div.category-container
+ each val in categories
+  .category
+  a(href=val.slugName) #{val.name}
