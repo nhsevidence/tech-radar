@@ -6,61 +6,73 @@
             "values" : [
                 { 
                     "name" : "C#",
+                    "url" : "csharp",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 },  
                 { 
                     "name" : "F#",
+                    "url" : "fsharp",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 },      
                 { 
                     "name" : ".NET MVC",
+                    "url" : ".net-mvc",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 },  
                 { 
                     "name" : "NodeJS",
+                    "url" : "nodejs",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 },
                 { 
                     "name" : "Meteor",
+                    "url" : "meteor",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 }, 
                 { 
                     "name" : "SQL Server",
+                    "url" : "sql-server",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 }, 
                 { 
                     "name" : "Fast ESP",
+                    "url" : "fast-esp",
                     "status" : "Retiring",
                     "desc" : "Something goes here"
                 }, 
                 { 
-                    "name" : "ElasticSearch",
+                    "name" : "Elastic Search",
+                    "url" : "elastic-search",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 }, 
                  { 
                     "name" : "RavenDB",
+                    "url" : "ravendb",
                     "status" : "?",
                     "desc" : "Something goes here"
                 }, 
                  { 
                     "name" : "MongoDB",
+                    "url" : "mongodb",
                     "status" : "?",
                     "desc" : "Something goes here"
                 }, 
                  { 
                     "name" : "SPARQL/RDF/OW",
+                    "url" : "sparql-rdf-ow",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 }, 
                  { 
                     "name" : "Rabbit MQ",
+                    "url" : "rabbit-mq",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 }
@@ -72,41 +84,49 @@
             "values" : [
                 { 
                     "name" : "AWS",
+                    "url" : "aws",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Docker",
+                    "url" : "docker",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Linux",
+                    "url" : "linux",
                     "status" : "?",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Mono",
+                    "url" : "mono",
                     "status" : "?",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Windows",
+                    "url" : "windows",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Rancher",
+                    "url" : "rancher",
                     "status" : "Trialling",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Teamcity",
+                    "url" : "teamcity",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "OctoDeploy",
+                    "url" : "octodeploy",
                     "status" : "Adopted",
                     "desc" : "Something goes here"
                 }

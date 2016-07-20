@@ -1,0 +1,7 @@
+extend layout
+block content
+    h1 #{category}
+    ul
+    each val in json
+        li 
+            a(href=catslug + "/" + val.url) #{val.name}

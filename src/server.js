@@ -13,7 +13,7 @@ app.set('view engine', 'jade')
 // Our base url 
 app.get('/', function (req, res) {
   var json = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-  var categories = jsonQuery('categories', {
+  var categories = jsonQuery('categories[]', {
         data: json
     });
 
@@ -24,6 +24,38 @@ app.get('/', function (req, res) {
     }
   )
 });
+
+app.get('/languages-and-frameworks', function (req, res) {
+    var obj = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    var query = jsonQuery('categories[name=Languages and Frameworks]', {
+        data: obj
+    }).value;
+    var values = query["values"];
+  res.render('category',
+  { 
+    title : 'Languages and Frameworks',
+    category : query["name"],
+    catslug : query["slugName"],
+    json : query["values"]
+    }
+  )
+})
+
+app.get('/platforms-and-infrastructure', function (req, res) {
+    var obj = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    var query = jsonQuery('categories[name=Platforms and Infrastructure]', {
+        data: obj
+    }).value;
+    var values = query["values"];
+  res.render('category',
+  { 
+    title : 'Platforms and Infrastructure',
+    category : query["name"],
+    catslug : query["slugName"],
+    json : query["values"]
+    }
+  )
+})
 
 app.listen(PORT);
 
