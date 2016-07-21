@@ -1,0 +1,17 @@
+{% extends "layouts/_layout.njk" %}
+{% set title = title %}
+
+{% block body %}
+<div class=row>
+    <div class="span2">
+    {% include "partials/filters.njk" %}
+    </div>
+    <div class="span6">
+     {% include "partials/results.njk" %}
+    </div>
+    <div class="span4">
+      {% include "partials/description.njk" %}
+    </div>
+</div>
+
+{% endblock %}

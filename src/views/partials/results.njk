@@ -1,0 +1,15 @@
+<div class="row">
+  {% for item in categoryList %}
+    <div class="span6 tech-container">
+      <h4>{{ item.name }}</h1>
+      {% for tech in item.values %}
+      <div class={{tech.status}} data-status={{tech.status}} data-desc={{tech.url}}>
+        <p>{{ tech.name}}</p>
+      </div>
+        {% endfor %}
+    </div>
+
+  {% else %}
+    <li>This would display if the 'item' collection were empty</li>
+  {% endfor %}
+</div>
