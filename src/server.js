@@ -20,6 +20,7 @@ var env = nunjucks.configure(path.join( __dirname, "/views") , {
 	express: app
 });
 
+app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
   var json = JSON.parse(fs.readFileSync('data.json', 'utf8'));
