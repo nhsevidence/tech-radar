@@ -11,6 +11,9 @@
     "express": "^4.13.3",
     "nunjucks": "^2.4.2",
     "json-query": "latest",
-    "group-by" : "latest"
+    "group-by": "latest"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
   }
 }
