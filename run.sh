@@ -1,1 +1,0 @@
-docker run --rm --name radardev -p 1234:1234 radardev
