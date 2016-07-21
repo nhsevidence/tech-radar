@@ -27,10 +27,10 @@ app.get('/', function (req, res) {
   var categories = jsonQuery('categories[]', {
         data: json
     }).value;
-  //var statusTypes = jsonQuery('categories[name=Languages and Frameworks]', {
-     //   data: obj
-    //}).value;
-   // var techs = groupBy(query["values"], "status");
+var statusList = [];
+for (var i = 0; i < categories.values.length; i++) {
+  addtoStatusList(categories[i]);
+}
 
   res.render('index',
   { 
@@ -44,3 +44,9 @@ app.get('/', function (req, res) {
 app.listen(PORT);
 
 console.log('Running on http://localhost:' + PORT);
+
+function addtoStatusList(tech)
+{
+
+}
+
