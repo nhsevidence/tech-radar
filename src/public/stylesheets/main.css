@@ -2,9 +2,11 @@
     overflow: hidden;
 }
 
-.match-my-cols [class*="span"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;  
+@media (min-width: 767px) {
+    .match-my-cols [class*="span"]{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;  
+    }
 }
 
 .tech-container div {
