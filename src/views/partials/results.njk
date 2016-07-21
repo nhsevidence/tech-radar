@@ -3,7 +3,7 @@
     <div class="span6">
       <h3>{{ item.name }}</h1>
       {% for tech in item.values %}
-      <div>
+      <div class={{tech.status}} data-status={{tech.status}} data-desc={{tech.url}}>
         <p>{{ tech.name}}</p>
       </div>
         {% endfor %}
