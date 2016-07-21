@@ -2,6 +2,11 @@
   {% for item in categoryList %}
     <div class="span6">
       <h3>{{ item.name }}</h1>
+      {% for tech in item.values %}
+      <div>
+        <p>{{ tech.name}}</p>
+      </div>
+        {% endfor %}
     </div>
 
   {% else %}
