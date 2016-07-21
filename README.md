@@ -29,7 +29,7 @@ Once you've got the dev environment setup (or installed node/npm locally)
 
 Install packages:
 ```
-npm install
+npm install --no-bin-links
 ```
 
 To run the app:

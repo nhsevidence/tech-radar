@@ -5,7 +5,10 @@ WORKDIR /src
 
 # Install app dependencies
 ADD src/package.json /src/package.json
-RUN npm install 
+RUN npm install
+
+# Run the tests
+RUN mocha
 
 # Add code into image
 ADD src/ /src
