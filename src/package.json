@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-    "jade": "^1.0.4",
+    "nunjucks": "^2.4.2",
     "json-query": "latest",
     "group-by" : "latest"
   }

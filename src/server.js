@@ -2,14 +2,23 @@
 
 const express = require('express'),
 PORT = 1234,
+path = require("path"),
 app = express(),
 jsonQuery = require('json-query'),
 fs = require("fs"),
-groupBy = require('group-by');
+groupBy = require('group-by'),
+nunjucks = require("nunjucks");
 
 // Tells express we want to use jade and where we will keep our views
-app.set('views', __dirname + '/views/')
-app.set('view engine', 'jade')
+app.set("views", path.join( __dirname, "/views") );
+app.set("view engine", "njk");
+
+// Nunjucks view engine
+var env = nunjucks.configure(path.join( __dirname, "/views") , {
+	autoescape: true,
+	noCache: true,
+	express: app
+});
 
 // Our base url 
 app.get('/', function (req, res) {
