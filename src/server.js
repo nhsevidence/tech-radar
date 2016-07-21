@@ -28,14 +28,22 @@ app.get('/', function (req, res) {
         data: json
     }).value;
 var statusList = [];
-for (var i = 0; i < categories.values.length; i++) {
-  addtoStatusList(categories[i]);
+for (var i = 0; i < categories.length; i++) {
+  for(var y = 0; y < categories[i].values.length; y++) {
+    var tech = categories[i].values[y].status;
+     if(statusList.indexOf(tech) < 0)
+      {
+     statusList.push(tech);
+      }
+  }
+ 
 }
 
   res.render('index',
   { 
     title : 'NICE Tech Radar',
-    categoryList : categories
+    categoryList : categories,
+    statusList : statusList
     }
   )
 });
@@ -44,9 +52,4 @@ for (var i = 0; i < categories.values.length; i++) {
 app.listen(PORT);
 
 console.log('Running on http://localhost:' + PORT);
-
-function addtoStatusList(tech)
-{
-
-}
 
