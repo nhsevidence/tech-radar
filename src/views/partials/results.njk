@@ -1,1 +1,10 @@
-<h1>Results</h1>
+<div class="row">
+  {% for item in categoryList %}
+    <div class="span6">
+      <h3>{{ item.name }}</h1>
+    </div>
+
+  {% else %}
+    <li>This would display if the 'item' collection were empty</li>
+  {% endfor %}
+</div>

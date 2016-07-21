@@ -9,7 +9,7 @@ fs = require("fs"),
 groupBy = require('group-by'),
 nunjucks = require("nunjucks");
 
-// Tells express we want to use jade and where we will keep our views
+// Tells express we want to use njk and where we will keep our views
 app.set("views", path.join( __dirname, "/views") );
 app.set("view engine", "njk");
 
@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
   var json = JSON.parse(fs.readFileSync('data.json', 'utf8'));
   var categories = jsonQuery('categories[]', {
         data: json
-    });
+    }).value;
   //var statusTypes = jsonQuery('categories[name=Languages and Frameworks]', {
      //   data: obj
     //}).value;
@@ -34,8 +34,7 @@ app.get('/', function (req, res) {
   res.render('index',
   { 
     title : 'NICE Tech Radar',
-    categories : categories.value,
-
+    categoryList : categories
     }
   )
 });
