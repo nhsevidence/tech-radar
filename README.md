@@ -25,7 +25,8 @@ sh devenv.sh
 To escape from the environment once you are in it CTRL-D
 
 ## Running the app
-Once you've got the dev environment setup (or installed node/npm locally) 
+Once you've got the dev environment setup (or installed node/npm locally), change directory to the root of this repository:
+
 
 Install packages:
 ```
@@ -35,6 +36,12 @@ npm install --no-bin-links
 To run the app:
 ```
 npm start
+```
+
+## Running the tests
+
+```
+npm test
 ```
 
 Now open your browser and visit (if using docker on windows/mac osx)

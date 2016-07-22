@@ -5,13 +5,16 @@ WORKDIR /src
 
 # Install app dependencies
 ADD src/package.json /src/package.json
-RUN npm install
+RUN npm install && \
+    npm install -g mocha
+
+ADD test/ /test
+ADD src/ /src
 
 # Run the tests
 RUN mocha
 
-# Add code into image
-ADD src/ /src
+# TODO: some cleanup
 
 # run the server
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
