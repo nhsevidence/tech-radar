@@ -3,10 +3,18 @@
 }
 
 @media (min-width: 767px) {
-    .match-my-cols .filter-container{
+    .match-my-cols .col {
         margin-bottom: -99999px;
         padding-bottom: 99999px;  
     }
+}
+
+.row h4 {
+    color:#666;
+}
+
+.tech-container {
+    margin-top: 20px;
 }
 
 .tech-container .tech {
@@ -137,4 +145,13 @@ input:disabled ~ .control__indicator {
 
 .status-color.Retiring {
     background-color:  #F4001C;
+}
+
+.desc-container {
+    border-left: 2px solid #E3E3E3;
+    padding: 20px;
+}
+
+.desc-container p {
+    font-size: 16px;
 }
