@@ -15,6 +15,7 @@
 
 .tech-container {
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .tech-container .tech {
