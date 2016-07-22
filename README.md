@@ -28,9 +28,14 @@ To escape from the environment once you are in it CTRL-D
 Once you've got the dev environment setup (or installed node/npm locally), change directory to the root of this repository:
 
 
-Install packages:
+Install packages if using dev environment:
 ```
+npm install --only=dev
 npm install --no-bin-links
+```
+Install packages if running node/npm natively:
+```
+npm install
 ```
 
 To run the app:
