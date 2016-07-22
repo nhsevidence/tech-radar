@@ -1,6 +1,6 @@
 var assert = require("assert"); // node.js core module
 var cheerio = require('cheerio');
-var app = require('./fake_app');
+var res = require('./fake_app');
 var radar = require("../src/radar");
 
 describe('Tech radar', function(){
@@ -11,9 +11,9 @@ describe('Tech radar', function(){
     	name : 'Category name goes here'
     }];
 
-   	var html = radar(app, categories);
+   	radar(res, categories);
 
-	let $ = cheerio.load(html);
+	  let $ = cheerio.load(res.html());
 
     var name = $('.tech-container h4').text().trim();
     assert.equal(name, 'Category name goes here'); 
@@ -30,9 +30,9 @@ describe('Tech radar', function(){
     	}
     ];
 
-   	var html = radar(app, categories);
+   	radar(res, categories);
 
-	let $ = cheerio.load(html);
+	  let $ = cheerio.load(res.html());
 
     var count = $('.tech-container h4').length;
     assert.equal(count, 2); 
