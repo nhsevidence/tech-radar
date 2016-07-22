@@ -39,7 +39,6 @@ for (var i = 0; i < categories.length; i++) {
       }
   }
 }
-
  var data = {
       categories :categories,
       statusList : statusList
@@ -48,9 +47,8 @@ radar(res, data);
 });
 
 app.get('/technology/:tech', function (req, res) {
-  var tech = req.params.tech;
   var json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
-  var techData = jsonQuery('categories[]values[url=' + tech + ']', {
+  var techData = jsonQuery('categories[]values[url=' + req.params.tech + ']', {
       data: json
   });
   var category = techData.parents[2].value.name;
@@ -59,8 +57,7 @@ app.get('/technology/:tech', function (req, res) {
     tech : techData.value,
     category: category
     }
-  )
-
+ )
 });
 
 
