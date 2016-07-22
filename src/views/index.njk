@@ -3,14 +3,13 @@
 
 {% block body %}
 <div class="row match-my-cols">
-    <div class="span2 filter-container">
+    <div class="span2 filter-container col">
     {% include "partials/filters.njk" %}
     </div>
     <div class="span6">
      {% include "partials/results.njk" %}
     </div>
-    <div class="span4">
-      {% include "partials/description.njk" %}
+    <div class="span4 desc-container col">
     </div>
 </div>
 

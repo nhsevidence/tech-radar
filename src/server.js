@@ -6,7 +6,6 @@ path = require("path"),
 app = express(),
 jsonQuery = require('json-query'),
 fs = require("fs"),
-groupBy = require('group-by'),
 nunjucks = require("nunjucks"),
 radar = require("./radar");
 
@@ -39,17 +38,29 @@ for (var i = 0; i < categories.length; i++) {
      statusList.push(tech);
       }
   }
- 
 }
-
 
  var data = {
       categories :categories,
       statusList : statusList
     }
+radar(res, data);
+});
 
-  radar(res, data);
- 
+app.get('/technology/:tech', function (req, res) {
+  var tech = req.params.tech;
+  var json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
+  var techData = jsonQuery('categories[]values[url=' + tech + ']', {
+      data: json
+  });
+  var category = techData.parents[2].value.name;
+   res.render('partials/description',
+  { 
+    tech : techData.value,
+    category: category
+    }
+  )
+
 });
 
 
