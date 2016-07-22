@@ -15,7 +15,7 @@ Set the APP_DIR directory to the FULL path to this directory
 ```
 export APP_DIR=/full/path/to/tech-radar/code
 ```
-For example if using docker toolbox on windows it will be /c/Users/<username>/src/tech-radar.  On MAC osx it will be /Users/<username>/src/tech-radar.  Docker toolbox only shares your user directory with docker so you have to clone this repository somewhere in your user directory!
+For example if using docker toolbox on windows it will be /c/Users/username/src/tech-radar.  On MAC osx it will be /Users/username/src/tech-radar.  Docker toolbox only shares your user directory with docker so you have to clone this repository somewhere in your user directory!
 
 Now run the environment up using:
 ```
