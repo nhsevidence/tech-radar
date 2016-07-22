@@ -7,7 +7,8 @@ app = express(),
 jsonQuery = require('json-query'),
 fs = require("fs"),
 groupBy = require('group-by'),
-nunjucks = require("nunjucks");
+nunjucks = require("nunjucks"),
+radar = require("./radar");
 
 // Tells express we want to use njk and where we will keep our views
 app.set("views", path.join( __dirname, "/views") );
@@ -24,9 +25,11 @@ app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
   var json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
+
   var categories = jsonQuery('categories[]', {
         data: json
-    }).value;
+    }).value
+    
 var statusList = [];
 for (var i = 0; i < categories.length; i++) {
   for(var y = 0; y < categories[i].values.length; y++) {
@@ -39,13 +42,14 @@ for (var i = 0; i < categories.length; i++) {
  
 }
 
-  res.render('index',
-  { 
-    title : 'NICE Tech Radar',
-    categoryList : categories,
-    statusList : statusList
+
+ var data = {
+      categories :categories,
+      statusList : statusList
     }
-  )
+
+  radar(res, data);
+ 
 });
 
 

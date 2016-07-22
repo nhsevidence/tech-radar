@@ -1,16 +1,14 @@
 'use strict';
 
-module.exports = function (app, categories) {
+module.exports = function (res, data) {
   var model = { 
     title : 'NICE Tech Radar',
-    categoryList : categories
+    categoryList : data.categories,
+    statusList: data.statusList
   };
-
-  var html = "";
-  app.render('index', model, function (err, h) {
-  	html = h;
-  });
   
-  return html;
+  res.render('index', model, function (err, html) {    
+    res.send(html);
+  });
 };
 
