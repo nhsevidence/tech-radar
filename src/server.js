@@ -28,10 +28,8 @@ app.get('/', function (req, res) {
 
   var categories = jsonQuery('categories[]', {
         data: json
-    }).value;
-
-  radar(res, categories);
-    /*
+    }).value
+    
 var statusList = [];
 for (var i = 0; i < categories.length; i++) {
   for(var y = 0; y < categories[i].values.length; y++) {
@@ -43,7 +41,14 @@ for (var i = 0; i < categories.length; i++) {
   }
  
 }
-*/
+
+
+ var data = {
+      categories :categories,
+      statusList : statusList
+    }
+
+  radar(res, data);
  
 });
 

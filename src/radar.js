@@ -1,9 +1,10 @@
 'use strict';
 
-module.exports = function (res, categories) {
+module.exports = function (res, data) {
   var model = { 
     title : 'NICE Tech Radar',
-    categoryList : categories
+    categoryList : data.categories,
+    statusList: data.statusList
   };
   
   res.render('index', model, function (err, html) {    
