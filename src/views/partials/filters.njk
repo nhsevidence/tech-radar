@@ -2,7 +2,7 @@
 <div>
     {% for status in statusList %}
     <label class="control control--checkbox" id={{status}}>                
-        <input type="checkbox" checked="checked" value={{status}} data-href={{status}}>
+        <input type="checkbox" checked="checked"  data-status={{status}}>
             {{status}}
         <div class="control__indicator"></div>
         <div class="status-color {{status}}"></div>

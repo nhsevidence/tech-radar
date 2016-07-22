@@ -9,7 +9,7 @@
     }
 }
 
-.tech-container div {
+.tech-container .tech {
     height: 120px;
     border : 1px solid #BABABA;
     margin-bottom: 20px;
@@ -18,9 +18,14 @@
     -webkit-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     -moz-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
+    display: none;
 }
 
-.tech-container div:hover {
+.tech-container .tech.show {
+    display: block;
+} 
+
+.tech-container .tech:hover {
     background-color:  #F1F1F1;
 }
 
