@@ -6,7 +6,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "test": "mocha"
+    "test": "node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "express": "^4.13.3",
