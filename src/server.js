@@ -27,15 +27,23 @@ app.get('/', function (req, res) {
   var categories = jsonQuery('categories[]', {
         data: json
     }).value;
-  //var statusTypes = jsonQuery('categories[name=Languages and Frameworks]', {
-     //   data: obj
-    //}).value;
-   // var techs = groupBy(query["values"], "status");
+var statusList = [];
+for (var i = 0; i < categories.length; i++) {
+  for(var y = 0; y < categories[i].values.length; y++) {
+    var tech = categories[i].values[y].status;
+     if(statusList.indexOf(tech) < 0)
+      {
+     statusList.push(tech);
+      }
+  }
+ 
+}
 
   res.render('index',
   { 
     title : 'NICE Tech Radar',
-    categoryList : categories
+    categoryList : categories,
+    statusList : statusList
     }
   )
 });
@@ -44,3 +52,4 @@ app.get('/', function (req, res) {
 app.listen(PORT);
 
 console.log('Running on http://localhost:' + PORT);
+

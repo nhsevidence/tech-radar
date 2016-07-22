@@ -1,4 +1,15 @@
-.tech-container div {
+.row.match-my-cols {
+    overflow: hidden;
+}
+
+@media (min-width: 767px) {
+    .match-my-cols .filter-container{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;  
+    }
+}
+
+.tech-container .tech {
     height: 120px;
     border : 1px solid #BABABA;
     margin-bottom: 20px;
@@ -7,9 +18,14 @@
     -webkit-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     -moz-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
+    display: none;
 }
 
-.tech-container div:hover {
+.tech-container .tech.show {
+    display: block;
+} 
+
+.tech-container .tech:hover {
     background-color:  #F1F1F1;
 }
 
@@ -27,4 +43,98 @@
 
 .tech-container .Retiring {
      border-left-color:  #F4001C;
+}
+
+.filter-container {
+    background-color: #F1F1F1;
+    padding: 20px;
+}
+
+.filter-container h4 {
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.control {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 34px;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+.control input {
+	    position: absolute;
+	    z-index: -1;
+	    opacity: 0;
+
+}
+
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #999999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+.control--checkbox .control__indicator:after {
+    top: 4px;
+    left: 10px;
+    width: 4px;
+    height: 11px;
+    transform: rotate(45deg);
+    border: solid green;
+    border-width: 0 3px 3px 0;
+}
+
+/* Disabled state */
+input:disabled ~ .control__indicator {
+    pointer-events: none;
+    opacity: .6;
+    background: #e6e6e6;
+}
+
+ /* Check mark */
+.control__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+
+.status-color {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 6px;
+    left: 110px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.status-color.Adopted {
+    background-color:  #68C460;
+}
+
+.status-color.Trialling {
+    background-color:  #F59716;
+}
+
+.status-color.Assessing {
+    background-color:  #69BDDF;
+}
+
+.status-color.Retiring {
+    background-color:  #F4001C;
 }

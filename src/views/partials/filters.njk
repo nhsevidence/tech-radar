@@ -1,2 +1,11 @@
-<h1>Filters</h1>
-
+<h4>Filter by status</h1>
+<div>
+    {% for status in statusList %}
+    <label class="control control--checkbox" id={{status}}>                
+        <input type="checkbox" checked="checked"  data-status={{status}}>
+            {{status}}
+        <div class="control__indicator"></div>
+        <div class="status-color {{status}}"></div>
+    </label>
+    {% endfor %}
+</div>

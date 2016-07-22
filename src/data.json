@@ -55,13 +55,13 @@
                  { 
                     "name" : "RavenDB",
                     "url" : "ravendb",
-                    "status" : "?",
+                    "status" : "Adopted",
                     "desc" : "Something goes here"
                 }, 
                  { 
                     "name" : "MongoDB",
                     "url" : "mongodb",
-                    "status" : "?",
+                    "status" : "Assessing",
                     "desc" : "Something goes here"
                 }, 
                  { 
@@ -97,13 +97,13 @@
                  { 
                     "name" : "Linux",
                     "url" : "linux",
-                    "status" : "?",
+                    "status" : "Adopted",
                     "desc" : "Something goes here"
                 },
                  { 
                     "name" : "Mono",
                     "url" : "mono",
-                    "status" : "?",
+                    "status" : "Assessing",
                     "desc" : "Something goes here"
                 },
                  { 
