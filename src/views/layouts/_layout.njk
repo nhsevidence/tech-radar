@@ -9,7 +9,18 @@
 	<script src="/scripts/tech-radar.js"></script>
 </head>
 <body>
-{% block body %}
-		This is the default body content
-{% endblock %}
+	<div class="tophat-ext">
+		<div class="restrict-width">
+			<h1>Technology overview dashboard</h1>
+		</div>
+	</div>
+	<div class="content restrict-width">
+	{% block body %}
+			This is the default body content
+	{% endblock %}
+	</div>
+	<script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.dev.js" data-environment="Live"></script>
 </body>
+<footer class="footer-wrapper-new">
+	  {#{% include "partials/footer.njk" %}#}
+</footer>
