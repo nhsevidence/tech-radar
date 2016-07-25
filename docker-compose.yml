@@ -1,0 +1,4 @@
+techradar:
+  image: "${IMAGE_NAME}:${IMAGE_VERSION}"
+  ports:
+    - "1234:1234"
