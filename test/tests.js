@@ -92,6 +92,33 @@ describe('Tech radar', function(){
     });
   });
 
+  describe('Data', function() {
+    it('should apply the status name to each technology using id', function(){
+
+      var status = [
+        {
+          id : 1,
+          name : 'Assessing'
+        }
+      ];
+
+      var categories = [
+        {               
+          values : [
+            { 
+                status : 1
+            }
+          ]
+        }
+      ];
+      
+
+      var viewModel = createViewModel(categories, status);
+
+      assert.equal(viewModel[0].values[0].status = 'Assessing');
+    });
+  });
+
 /*
   it('should show the technologies within a category', function(){
 
