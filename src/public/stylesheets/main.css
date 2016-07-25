@@ -15,6 +15,7 @@
 
 .tech-container {
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .tech-container .tech {
@@ -155,3 +156,16 @@ input:disabled ~ .control__indicator {
 .desc-container p {
     font-size: 16px;
 }
+
+.tech-breadcrumb {
+    font-weight: 600;
+}
+
+.tech-breadcrumb p {
+    margin-top: 30px;
+}
+
+.tech-breadcrumb span {
+    color: #2CA6E0;
+}
+

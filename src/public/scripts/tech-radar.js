@@ -1,8 +1,7 @@
 $( document ).ready(function() {
     $('.control--checkbox input').on("change", function () {
         var status = $(this).data('status');
-        var techs = $(".tech." + status);
-        
+        var techs = $(".tech." + status); 
         $.each(techs, function( index, value ) {
             $(value).toggleClass("show");
         });
@@ -10,7 +9,6 @@ $( document ).ready(function() {
 
     $(".tech").on("click", function () {
         var url = $(this).data("desc");
-
          $.ajax({
             type: "GET",
             url: "/technology/" + url,
