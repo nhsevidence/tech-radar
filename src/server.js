@@ -7,10 +7,15 @@ app = express(),
 jsonQuery = require('json-query'),
 fs = require("fs"),
 nunjucks = require("nunjucks"),
-radar = require("./radar");
+radar = require("./radar"),
+dataMod = require("./data");
 
 const json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
 const statusList = json.status;
+const mappedCategories = dataMod(json.categories, statusList);
+const viewStatusList = statusList.map(function(status) {
+     return status.name;
+   }); 
 
 
 // Tells express we want to use njk and where we will keep our views
@@ -27,11 +32,9 @@ var env = nunjucks.configure(path.join( __dirname, "/views") , {
 app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
-  var categories = json.categories;
-  
   var data = {
-      categories :categories,
-      statusList : statusList
+      categories : mappedCategories,
+      statusList : viewStatusList
     }
   radar(res, data);
 });
