@@ -1,11 +1,12 @@
 'use strict';
 
 var jsonQuery = require('json-query');
+var sortBy = require('sort-by');
 
 module.exports = function (categories, statusList) {
 
    var mappedCategories = categories.map(function(cat) {
-        
+        cat.values.sort(sortBy('status'));
         var viewTechList = cat.values.map(function(tech)
         {
             var status = jsonQuery('[id=' + tech.status +']', {
