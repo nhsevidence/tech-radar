@@ -179,6 +179,25 @@ input:disabled ~ .control__indicator {
     font-size: 16px;
 }
 
+div.fixed {
+    position: fixed;
+    width: 20%;
+    top:10px;
+}
+
+@media (min-width:768px) and (max-width:979px) {
+    div.fixed {
+        width:25%;
+    }
+}
+
+@media (max-width: 767px) {
+   div.fixed {
+        position: static;
+        width: 100%;
+    }
+}
+
 .tech-breadcrumb {
     font-weight: 600;
 }
@@ -264,6 +283,7 @@ footer.footer-wrapper-new div.container > div.row {
 
 footer.footer-wrapper-new .footer {
     overflow: hidden;
+    position: relative;
 }
 
 footer.footer-wrapper-new .line-div {
