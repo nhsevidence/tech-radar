@@ -69,9 +69,9 @@ describe('Tech radar', function(){
 
         var viewModel = dataMod(categories, statusList);
 
-        assert.equal(viewModel[0].values[0].status, 'Assessing');
-        assert.equal(viewModel[0].values[1].status, 'Trialling');
-        assert.equal(viewModel[0].values[2].status, 'Adopted');
+        assert.equal(viewModel[0].values[0].name, 'First');
+        assert.equal(viewModel[0].values[1].name, 'Second');
+        assert.equal(viewModel[0].values[2].name, 'Third');
         });
   });
 });
