@@ -7,7 +7,16 @@ app = express(),
 jsonQuery = require('json-query'),
 fs = require("fs"),
 nunjucks = require("nunjucks"),
-radar = require("./radar");
+radar = require("./radar"),
+dataMod = require("./data");
+
+const json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
+const statusList = json.status;
+const mappedCategories = dataMod(json.categories, statusList);
+const viewStatusList = statusList.map(function(status) {
+     return status.name;
+   }); 
+
 
 // Tells express we want to use njk and where we will keep our views
 app.set("views", path.join( __dirname, "/views") );
@@ -23,31 +32,14 @@ var env = nunjucks.configure(path.join( __dirname, "/views") , {
 app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
-  var json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
-
-  var categories = jsonQuery('categories[]', {
-        data: json
-    }).value
-    
-var statusList = [];
-for (var i = 0; i < categories.length; i++) {
-  for(var y = 0; y < categories[i].values.length; y++) {
-    var tech = categories[i].values[y].status;
-     if(statusList.indexOf(tech) < 0)
-      {
-     statusList.push(tech);
-      }
-  }
-}
- var data = {
-      categories :categories,
-      statusList : statusList
+  var data = {
+      categories : mappedCategories,
+      statusList : viewStatusList
     }
-radar(res, data);
+  radar(res, data);
 });
 
 app.get('/technology/:tech', function (req, res) {
-  var json = JSON.parse(fs.readFileSync('src/data.json', 'utf8'));
   var techData = jsonQuery('categories[]values[url=' + req.params.tech + ']', {
       data: json
   });
