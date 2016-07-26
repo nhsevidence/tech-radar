@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.13.3",
     "nunjucks": "^2.4.2",
-    "json-query": "latest"
+    "json-query": "latest",
+    "sort-by": "latest"
   },
   "devDependencies": {
     "cheerio": "^0.20.0",
