@@ -11,12 +11,16 @@ div.nice-tophat {
 
 .tophat-ext {
     background-color: #39557A;
-    padding: 10px 0px;
+    padding: 4px 0px;
 }
 
-.tophat-ext h1 {
+.tophat-ext h1 a {
     margin: 0;
     color:#fff;
+}
+
+.tophat-ext h1 a:hover {
+    text-decoration: none;
 }
 
 .row.match-my-cols {
@@ -37,7 +41,6 @@ div.nice-tophat {
 
 .tech-container {
     margin-top: 20px;
-    cursor: pointer;
 }
 
 .tech-container .tech {
@@ -50,6 +53,7 @@ div.nice-tophat {
     -moz-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     display: none;
+    cursor: pointer;
 }
 
 .tech-container .tech.show {
@@ -64,7 +68,7 @@ div.nice-tophat {
     border-left-color:  #68C460;
 }
 
-.tech-container .Trialling {
+.tech-container .Trialing {
      border-left-color: #F59716;
 }
 
@@ -158,7 +162,7 @@ input:disabled ~ .control__indicator {
     background-color:  #68C460;
 }
 
-.status-color.Trialling {
+.status-color.Trialing {
     background-color:  #F59716;
 }
 
@@ -177,6 +181,19 @@ input:disabled ~ .control__indicator {
 
 .desc-container p {
     font-size: 16px;
+}
+
+#desc .default {
+  font-size: 24px;  
+  color:#B3B3B3;
+}
+
+#desc .centre {
+    padding-top: 140px;
+}
+
+#desc .divider { 
+    padding: 0 5px
 }
 
 div.fixed {
