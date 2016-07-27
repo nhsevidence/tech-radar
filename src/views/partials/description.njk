@@ -1,8 +1,14 @@
 <div id="desc">
     <h4>Tech description</h4>
+    {% if category %}
     <div class="tech-breadcrumb">
         <p>{{category}} > <span>{{tech.status}}</span></p>
     </div>
     <h2>{{tech.name}}</h2>
     <p>{{tech.desc}}</p>
+    {% else %}
+    <div class="centre">
+    <p class="default">Select a technology from the dashboard to view it here</p>
+    </div>
+    {% endif %}
 </div>

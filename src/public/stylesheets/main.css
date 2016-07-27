@@ -179,6 +179,15 @@ input:disabled ~ .control__indicator {
     font-size: 16px;
 }
 
+#desc .default {
+  font-size: 24px;  
+  color:#B3B3B3;
+}
+
+#desc .centre {
+    padding-top: 140px;
+}
+
 div.fixed {
     position: fixed;
     width: 20%;
@@ -295,3 +304,4 @@ footer.footer-wrapper-new .line {
     margin-bottom: -10px;
     width: 71%;
 }
+
