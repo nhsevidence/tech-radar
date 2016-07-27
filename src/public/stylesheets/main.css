@@ -14,9 +14,13 @@ div.nice-tophat {
     padding: 10px 0px;
 }
 
-.tophat-ext h1 {
+.tophat-ext h1 a {
     margin: 0;
     color:#fff;
+}
+
+.tophat-ext h1 a:hover {
+    text-decoration: none;
 }
 
 .row.match-my-cols {
