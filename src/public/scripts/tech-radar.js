@@ -9,15 +9,7 @@ $( document ).ready(function() {
 
     $(".tech").on("click", function () {
         var url = $(this).data("desc");
-         $.ajax({
-            type: "GET",
-            url: "/technology/" + url,
-            success: function (data) {
-                $('.desc-container').html(data);
-                 var scrollVal = $(window).scrollTop();
-                CheckScrollState(scrollVal);
-            }
-        });
+        LoadDescription(url);
     });
 
      $(window).on("scroll", function() {
@@ -86,6 +78,33 @@ $( document ).ready(function() {
          var descPos = desc.offset();
          desc.removeClass("fixed").addClass("abs");
          desc.css("top",descPos.top);  
+    }
+
+    function CreatePageState(desc) {
+         history.pushState(desc, "", "?desc=" + desc);
+    }
+
+    function LoadDescription(url) {
+         $.ajax({
+            type: "GET",
+            url: "/technology/" + url,
+            success: function (data) {
+                $('.desc-container').html(data);
+                CreatePageState(url);
+                 var scrollVal = $(window).scrollTop();
+                CheckScrollState(scrollVal);            
+            }
+        });
+    }
+
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
 });

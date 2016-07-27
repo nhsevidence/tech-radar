@@ -40,16 +40,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/technology/:tech', function (req, res) {
-  var techData = jsonQuery('categories[]values[url=' + req.params.tech + ']', {
-      data: json
-  });
-  var category = techData.parents[2].value.name;
-   res.render('partials/description',
-  { 
-    tech : techData.value,
-    category: category
-    }
- )
+        var techData = jsonQuery('categories[]values[url=' + req.params.tech + ']', {
+        data: json
+    });
+    var category = techData.parents[2].value.name;
+      res.render('partials/description',
+    { 
+      tech : techData.value,
+      category: category
+    });
 });
 
 
