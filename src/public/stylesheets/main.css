@@ -185,6 +185,11 @@ div.fixed {
     top:10px;
 }
 
+div.abs {
+    position: absolute;
+    width:20%;
+}
+
 @media (min-width:768px) and (max-width:979px) {
     div.fixed {
         width:25%;
@@ -294,4 +299,8 @@ footer.footer-wrapper-new .line {
     border-top: #555555 solid 1px;
     margin-bottom: -10px;
     width: 71%;
+}
+
+#desc > p {
+    margin-bottom: 80px;
 }

@@ -27,10 +27,28 @@ $( document ).ready(function() {
     });
 
     function CheckScrollState(scrollVal) {
-        if ( scrollVal > 140 ) {
-            $('#desc').addClass("fixed");
+        var desc = $("#desc");
+        var descPos = desc.offset();
+        var height =  desc.innerHeight();
+        var pointOfHit = descPos.top + height;
+        var footerPos = $("footer").offset();
+        if(pointOfHit > footerPos.top)
+        {
+            if(desc.hasClass("fixed"))
+            {
+                desc.removeClass("fixed").addClass("abs");
+                desc.css("top",descPos.top);  
+            } else if(scrollVal < descPos.top)
+            {
+                desc.removeClass("abs").addClass("fixed");
+               desc.css("top","");  
+            }            
+        } else if ( scrollVal > 140 ) {
+            desc.removeClass("abs").addClass("fixed");
+             desc.css("top","");
         } else {
-            $('#desc').removeClass("fixed");
+            desc.removeClass("fixed").removeClass("abs");
+             desc.css("top","");
         }
     }
 });
