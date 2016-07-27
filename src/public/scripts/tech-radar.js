@@ -29,30 +29,63 @@ $( document ).ready(function() {
     function CheckScrollState(scrollVal) {
         var desc = $("#desc");
         var descPos = desc.offset();
-        var height =  desc.innerHeight();
-        var pointOfHit = descPos.top + height;
-        var footerPos = $("footer").offset();
-        if(height > $("#tech-row").innerHeight())
+            
+        if(NoResults(desc))
         {
-             desc.removeClass("fixed").removeClass("abs");
-             desc.css("top","");
-        } else if(pointOfHit > footerPos.top)
+             MakeStatic(desc);
+        } else if(DescHitsFooter(desc))
         {
             if(desc.hasClass("fixed"))
             {
-                desc.removeClass("fixed").addClass("abs");
-                desc.css("top",descPos.top);  
+                MakeAbsolute(desc); 
             } else if(scrollVal < descPos.top)
             {
-                desc.removeClass("abs").addClass("fixed");
-               desc.css("top","");  
+               MakeFixed(desc);
             }            
-        } else if ( scrollVal > 140 ) {
-            desc.removeClass("abs").addClass("fixed");
-             desc.css("top","");
+        } else if (ShouldStartFloating(scrollVal)) {
+           MakeFixed(desc);
         } else {
-            desc.removeClass("fixed").removeClass("abs");
-             desc.css("top","");
+           MakeStatic(desc);
         }
     }
+
+    function NoResults(desc)
+    {
+        var descHeight =  desc.innerHeight();
+        var techHeight = $("#tech-row").innerHeight();
+        return descHeight > techHeight;
+    }
+
+    function DescHitsFooter(desc)
+    {
+        var height =  desc.innerHeight();
+        var pointOfHit = desc.offset().top + height;
+        var footerPos = $("footer").offset();
+        return pointOfHit > footerPos.top;
+    }
+
+    function ShouldStartFloating(scrollVal)
+    {
+        return scrollVal > 140;
+    }
+
+    function MakeStatic(desc)
+    {
+        desc.removeClass("fixed").removeClass("abs");
+        desc.css("top","");
+    }
+
+    function MakeFixed(desc)
+    {
+        desc.removeClass("abs").addClass("fixed");
+        desc.css("top","");  
+    }
+
+    function MakeAbsolute(desc)
+    {
+         var descPos = desc.offset();
+         desc.removeClass("fixed").addClass("abs");
+         desc.css("top",descPos.top);  
+    }
+
 });
