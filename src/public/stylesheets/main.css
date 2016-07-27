@@ -68,7 +68,7 @@ div.nice-tophat {
     border-left-color:  #68C460;
 }
 
-.tech-container .Trialling {
+.tech-container .Trialing {
      border-left-color: #F59716;
 }
 
@@ -162,7 +162,7 @@ input:disabled ~ .control__indicator {
     background-color:  #68C460;
 }
 
-.status-color.Trialling {
+.status-color.Trialing {
     background-color:  #F59716;
 }
 
