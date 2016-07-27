@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="tech-row">
   {% for item in categoryList %}
     <div class="span6 tech-container">
       <h4>{{ item.name }}</h1>
@@ -10,6 +10,6 @@
     </div>
 
   {% else %}
-    <li>This would display if the 'item' collection were empty</li>
+    <li>No results</li>
   {% endfor %}
 </div>

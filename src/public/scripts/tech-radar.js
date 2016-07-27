@@ -32,7 +32,11 @@ $( document ).ready(function() {
         var height =  desc.innerHeight();
         var pointOfHit = descPos.top + height;
         var footerPos = $("footer").offset();
-        if(pointOfHit > footerPos.top)
+        if(height > $("#tech-row").innerHeight())
+        {
+             desc.removeClass("fixed").removeClass("abs");
+             desc.css("top","");
+        } else if(pointOfHit > footerPos.top)
         {
             if(desc.hasClass("fixed"))
             {
