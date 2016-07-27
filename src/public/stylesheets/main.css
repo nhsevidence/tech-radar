@@ -41,7 +41,6 @@ div.nice-tophat {
 
 .tech-container {
     margin-top: 20px;
-    cursor: pointer;
 }
 
 .tech-container .tech {
@@ -54,6 +53,7 @@ div.nice-tophat {
     -moz-box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     box-shadow: 0px 2px 2px 1px rgba(186,186,186,1);
     display: none;
+    cursor: pointer;
 }
 
 .tech-container .tech.show {
