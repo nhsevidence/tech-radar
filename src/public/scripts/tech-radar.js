@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+
+    GeneratePageFromUrl();
+
     $('.control--checkbox input').on("change", function () {
         var status = $(this).data('status');
         var techs = $(".tech." + status); 
@@ -105,6 +108,15 @@ $( document ).ready(function() {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function GeneratePageFromUrl()
+    {
+        var tech = getParameterByName('desc');
+        if(tech != null)
+        {
+            LoadDescription(tech);
+        }
     }
 
 });
