@@ -192,6 +192,10 @@ input:disabled ~ .control__indicator {
     padding-top: 140px;
 }
 
+#desc .divider { 
+    padding: 0 5px
+}
+
 div.fixed {
     position: fixed;
     width: 20%;
