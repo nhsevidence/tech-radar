@@ -58,5 +58,7 @@ Or, if running docker natively on linux
 localhost:1234
 ```
 
+# Adding technologies to the radar
 
+All the data for the radar can be found in the config file src/data.json.
 

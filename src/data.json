@@ -26,73 +26,73 @@
                     "name" : "C#",
                     "url" : "csharp",
                     "status" : 3,
-                    "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    "desc" : "C# is one of our core languages at NICE.  We use it for a variety of applications, both web and non-web.  It is a modern, secure language with a mature development environment and good productivity tooling."
                 },  
                 { 
                     "name" : "F#",
                     "url" : "fsharp",
                     "status" : 2,
-                    "desc" : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "desc" : "We've been trialling F# for some back-end api's and data transformation processes.  It feels familiar because its still .NET and enables a functional approach. We've enjoyed writing more concise code using it than typical C#, plus its type system is great for domain modelling."
                 },      
                 { 
-                    "name" : ".NET MVC",
+                    "name" : "ASP.NET MVC",
                     "url" : ".net-mvc",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "We use ASP.NET MVC.  It's a great web framework and we understand how to use it.  We've got several applications written using this."
                 },  
                 { 
-                    "name" : "NodeJS",
+                    "name" : "Node.js",
                     "url" : "nodejs",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "Node.js is server-side javascript. We are increasing using this for small websites and apps.  We like its lightweight nature and customisation potential.  It's enabling front end developers to be more involved in backend development and vice versa - boosting our development capacity.  It's got a thrivnig community with great development tools.  We are currently upskilling in this technology."
                 },
                 { 
                     "name" : "Meteor",
                     "url" : "meteor",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "Meteor is a complete platform for building web and mobile apps in pure JavaScript.  It provides out of the box features like templating/binding/events/minification/testing by abstracting the implementation of these mechanisms from the developer.  The downside to this is you have restricted customisation abilities.  We've been trialling this for increased speed-to-market for a few CRUD-style single page applications."
                 }, 
                 { 
-                    "name" : "SQL Server",
+                    "name" : "Microsoft SQL Server",
                     "url" : "sql-server",
                     "status" : 3,
-                    "desc" : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "desc" : "If you've got relational data, you need a relational database.  We use SQL Server and have done for a while."
                 }, 
                 { 
-                    "name" : "Fast ESP",
+                    "name" : "Microsoft Fast ESP",
                     "url" : "fast-esp",
                     "status" : 4,
-                    "desc" : "Something goes here"
+                    "desc" : "Microsoft FAST ESP is a search technology is no longer supported by Microsoft and we are in the process of retiring it in favour of more modern and supported search technologies."
                 }, 
                 { 
-                    "name" : "Elastic Search",
-                    "url" : "elastic-search",
+                    "name" : "Elastic",
+                    "url" : "elastic",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "Elastic is a highly optimised search technology providing high availability, full-text search, document oriented datastore.  We've found success using it for server log aggregation as part of an ELK stack and also for specific application search indices.  "
                 }, 
                  { 
                     "name" : "RavenDB",
                     "url" : "ravendb",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "A document-oriented database.  We use this for a several applications."
                 }, 
                  { 
                     "name" : "MongoDB",
                     "url" : "mongodb",
-                    "status" : 1,
-                    "desc" : "Something goes here"
+                    "status" : 2,
+                    "desc" : "A document-oriented database.  We use this for a few applications."
                 }, 
                  { 
-                    "name" : "SPARQL/RDF/OW",
-                    "url" : "sparql-rdf-ow",
+                    "name" : "Stardog",
+                    "url" : "stardog",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "We're interested in the semantic web and linked data here at NICE.  We've been trialling stardog as our graph database for storing graphs of knowledge. "
                 }, 
                  { 
                     "name" : "Rabbit MQ",
                     "url" : "rabbit-mq",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "A message queue system.  We've been using Rabbit MQ to pass messages around. It works - and there's loads of mature clients for it out there."
                 }
               ]
           }, 
@@ -101,52 +101,58 @@
           "slugName": "platforms-and-infrastructure",
             "values" : [
                 { 
-                    "name" : "AWS",
+                    "name" : "Amazon Web Services",
                     "url" : "aws",
                     "status" : 3,
-                    "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    "desc" : "Arguably the most mature cloud infrastructure provider around, we've recently migrated to this platform.  It's enabling us to scale our services along with demand and is widely supported in the development community."
                 },
                  { 
                     "name" : "Docker",
                     "url" : "docker",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "Docker is a container technology.  We've been finding Docker useful for all sorts - managing build dependancies, creating transient integration testing environments and deploying applications throught to production environments.  It's fast and we love it for providing technology agnostic build, test and deployment pipelines.    "
                 },
                  { 
                     "name" : "Linux",
                     "url" : "linux",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "We've seen increased linux usage mainly through our use of Docker.  It's relatively new to NICE but its becoming a core part of our infrastructure platform."
                 },
                  { 
                     "name" : "Mono",
                     "url" : "mono",
                     "status" : 1,
-                    "desc" : "Something goes here"
+                    "desc" : "Mono is a cross-platform port of .NET compiler and runtime.  We've used this in combination with docker for a few apps but are starting to look at .NET Core due to its recent release and thriving development community instead."
+                },
+                 { 
+                    "name" : ".NET Core",
+                    "url" : ".net-core",
+                    "status" : 1,
+                    "desc" : "NET Core is a cross-platform SDK and runtime for Windows/Linux/Mac OSX.  We're looking closely at this as an alternative to Mono for running .NET apps in Docker."
                 },
                  { 
                     "name" : "Windows",
                     "url" : "windows",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "We are historically a .NET development shop so Windows is a core part of our application infrastructure."
                 },
                  { 
                     "name" : "Rancher",
                     "url" : "rancher",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "Rancher is an open-source docker container orchistration platform.  We've found this to be easy to setup and intuitive to use.  Rancher provides service discovery, load balancing and more out of the box."
                 },
                  { 
                     "name" : "Teamcity",
                     "url" : "teamcity",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "Teamcity is our continuous integration server.  It does the job well for our .NET and docker build and test pipelines."
                 },
                  { 
-                    "name" : "OctoDeploy",
+                    "name" : "Octopus Deploy",
                     "url" : "octodeploy",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "Octopus Deploy is the tool that we use for deployments of apps to different environments."
                 }
             ]
           }
