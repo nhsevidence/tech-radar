@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+
     $('.control--checkbox input').on("change", function () {
         var status = $(this).data('status');
         var techs = $(".tech." + status); 
@@ -9,21 +11,18 @@ $( document ).ready(function() {
 
     $(".tech").on("click", function () {
         var url = $(this).data("desc");
-         $.ajax({
-            type: "GET",
-            url: "/technology/" + url,
-            success: function (data) {
-                $('.desc-container').html(data);
-                 var scrollVal = $(window).scrollTop();
-                CheckScrollState(scrollVal);
-            }
-        });
+        LoadDescription(url);
+        CreatePageState(url);
     });
 
      $(window).on("scroll", function() {
         //this will calculate header's full height, with borders, margins, paddings
        var scrollVal = $(this).scrollTop();     
         CheckScrollState(scrollVal);
+    });
+
+    $(window).on('popstate', function () {
+        GeneratePageUsingState();
     });
 
     function CheckScrollState(scrollVal) {
@@ -87,5 +86,37 @@ $( document ).ready(function() {
          desc.removeClass("fixed").addClass("abs");
          desc.css("top",descPos.top);  
     }
+
+    function CreatePageState(desc) {
+         history.pushState(desc, "", "?desc=" + desc);
+    }
+
+    function LoadDescription(url) {
+         $.ajax({
+            type: "GET",
+            url: "/technology/" + url,
+            success: function (data) {
+                $('.desc-container').html(data);
+                 var scrollVal = $(window).scrollTop();
+                CheckScrollState(scrollVal);        
+            }
+        });
+    }
+
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function GeneratePageUsingState() {
+        var state = history.state;
+        LoadDescription(state);
+    }
+
 
 });
