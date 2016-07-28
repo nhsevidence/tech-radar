@@ -7,12 +7,26 @@ $( document ).ready(function() {
         $.each(techs, function( index, value ) {
             $(value).toggleClass("show");
         });
+
+        var allTechs = $(".tech"); 
+        var visibleTechs = $(".tech.show");
+        if(allTechs.length == visibleTechs.length)
+        {
+             HideResetFilter();
+        } else {
+            ShowResetFilter();
+        } 
     });
 
     $(".tech").on("click", function () {
         var url = $(this).data("desc");
         LoadDescription(url);
         CreatePageState(url);
+    });
+
+    $("#ResetFilters").on("click", function (e) {
+        ResetFilters();
+        e.preventDefault();
     });
 
      $(window).on("scroll", function() {
@@ -116,6 +130,29 @@ $( document ).ready(function() {
     function GeneratePageUsingState() {
         var state = history.state;
         LoadDescription(state);
+    }
+
+    function ShowResetFilter()
+    {
+        $("#ResetFilters").addClass("show");
+    }
+
+    function HideResetFilter() {
+        $("#ResetFilters").removeClass("show");
+    }
+
+    function ResetFilters()
+    {
+
+        var techs = $(".tech"); 
+        $.each(techs, function( index, value ) {
+            $(value).addClass("show");
+        });
+        var filters = $('input[type=checkbox]');
+         $.each(filters, function( index, value ) {
+            $(value).prop("checked", true);
+         });
+        $("#ResetFilters").removeClass("show");
     }
 
 
