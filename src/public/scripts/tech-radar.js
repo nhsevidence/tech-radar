@@ -22,6 +22,9 @@ $( document ).ready(function() {
         var url = $(this).data("desc");
         LoadDescription(url);
         CreatePageState(url);
+        var tech = $(".tech.active");
+        $(tech).removeClass("active");
+        $(this).addClass("active");
     });
 
     $("#ResetFilters").on("click", function (e) {
