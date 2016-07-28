@@ -321,3 +321,14 @@ footer.footer-wrapper-new .line {
 #desc > p {
     margin-bottom: 80px;
 }
+
+#ResetFilters{
+    display: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#ResetFilters.show {
+    display: block;
+}
