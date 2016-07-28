@@ -32,20 +32,15 @@ var env = nunjucks.configure(path.join( __dirname, "/views") , {
 app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
-  var techData = null;
-  var category = null;
-  if(req.query.desc != null)
-  {
-      techData = jsonQuery('categories[]values[url=' + req.query.desc + ']', {
+    var techData = jsonQuery('categories[]values[url=' + req.query.desc + ']', {
         data: json
       });
-     category = techData != null ? techData.parents[2].value.name : null;
-  }
+   var category = techData.value != null ? techData.parents[2].value.name : null;
 
   var data = {
       categories : mappedCategories,
       statusList : viewStatusList,
-      tech : techData != null ? techData.value : null,
+      tech : techData.value,
       category: category
     }
   radar(res, data);
@@ -58,7 +53,7 @@ app.get('/technology/:tech', function (req, res) {
     var category = techData.value != null ? techData.parents[2].value.name : null;
       res.render('partials/description',
     { 
-      tech : techData != null ? techData.value : null,
+      tech :  techData.value,
       category: category
     });
 });
