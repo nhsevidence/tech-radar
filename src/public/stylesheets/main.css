@@ -57,7 +57,7 @@ div.nice-tophat {
 }
 
 .tech-container .tech.active  {
-    background-color: #c6dcec;
+    background-color: #d9e8f2;
 }
 
 .tech-container .tech.show {
@@ -69,7 +69,7 @@ div.nice-tophat {
 }
 
 .tech-container .tech.active:hover {
-    background-color: #b3d0e6;
+    background-color: #c6dcec;
 }
 
 .tech-container .Adopted {
