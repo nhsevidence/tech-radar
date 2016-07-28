@@ -26,49 +26,49 @@
                     "name" : "C#",
                     "url" : "csharp",
                     "status" : 3,
-                    "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    "desc" : "C# is one of our core languages at NICE.  We use it for a variety of applications, both web and non-web.  It is a modern, secure language with a mature development environment and good productivity tooling."
                 },  
                 { 
                     "name" : "F#",
                     "url" : "fsharp",
                     "status" : 2,
-                    "desc" : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "desc" : "We've been trialling F# for some back-end api's and data transformation processes.  It feels familiar because its still .NET and enables a functional approach. We've enjoyed writing more concise code using it than typical C#, plus its type system is great for domain modelling."
                 },      
                 { 
-                    "name" : ".NET MVC",
+                    "name" : "ASP.NET MVC",
                     "url" : ".net-mvc",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "Surprise! We use ASP.NET MVC"
                 },  
                 { 
                     "name" : "NodeJS",
                     "url" : "nodejs",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "Serverside javascript. We are increasing using this for small websites and apps.  We like its lightweight nature and customisation potential.  It's enabling front end developers to be more involved in backend development and vice versa - boosting our development capacity.  It's got a thrivnig community with great development tools.  We are currently upskilling in this technology."
                 },
                 { 
                     "name" : "Meteor",
                     "url" : "meteor",
                     "status" : 2,
-                    "desc" : "Something goes here"
+                    "desc" : "A full stack javascript framework.  It provides out of the box features like templating/binding/events/minification/testing by abstracting the implementation of these mechanisms from the developer.  The downside to this is you have restricted customisation abilities.  We've been trialling this for increased speed-to-market for a few CRUD-style single page applications."
                 }, 
                 { 
                     "name" : "SQL Server",
                     "url" : "sql-server",
                     "status" : 3,
-                    "desc" : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "desc" : "If you've got relational data, you need a relational database.  We use SQL Server and have done for a while."
                 }, 
                 { 
                     "name" : "Fast ESP",
                     "url" : "fast-esp",
                     "status" : 4,
-                    "desc" : "Something goes here"
+                    "desc" : "This search technology is no longer supported by Microsoft and we are in the process of retiring it in favour of more modern and supported search technologies."
                 }, 
                 { 
                     "name" : "Elastic Search",
                     "url" : "elastic-search",
                     "status" : 3,
-                    "desc" : "Something goes here"
+                    "desc" : "A highly optimised search technology providing high availability, full-text search, document oriented datastore.  Its got a great API  "
                 }, 
                  { 
                     "name" : "RavenDB",
