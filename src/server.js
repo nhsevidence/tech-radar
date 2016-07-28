@@ -42,7 +42,6 @@ app.get('/', function (req, res) {
      category = techData != null ? techData.parents[2].value.name : null;
   }
 
-  var tech = tech
   var data = {
       categories : mappedCategories,
       statusList : viewStatusList,
@@ -56,10 +55,10 @@ app.get('/technology/:tech', function (req, res) {
         var techData = jsonQuery('categories[]values[url=' + req.params.tech + ']', {
         data: json
     });
-    var category = techData.parents[2].value.name;
+    var category = techData.value != null ? techData.parents[2].value.name : null;
       res.render('partials/description',
     { 
-      tech : techData.value,
+      tech : techData != null ? techData.value : null,
       category: category
     });
 });

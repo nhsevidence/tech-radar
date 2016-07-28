@@ -12,12 +12,17 @@ $( document ).ready(function() {
     $(".tech").on("click", function () {
         var url = $(this).data("desc");
         LoadDescription(url);
+        CreatePageState(url);
     });
 
      $(window).on("scroll", function() {
         //this will calculate header's full height, with borders, margins, paddings
        var scrollVal = $(this).scrollTop();     
         CheckScrollState(scrollVal);
+    });
+
+    $(window).on('popstate', function () {
+        GeneratePageUsingState();
     });
 
     function CheckScrollState(scrollVal) {
@@ -92,9 +97,8 @@ $( document ).ready(function() {
             url: "/technology/" + url,
             success: function (data) {
                 $('.desc-container').html(data);
-                CreatePageState(url);
                  var scrollVal = $(window).scrollTop();
-                CheckScrollState(scrollVal);            
+                CheckScrollState(scrollVal);        
             }
         });
     }
@@ -107,6 +111,11 @@ $( document ).ready(function() {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function GeneratePageUsingState() {
+        var state = history.state;
+        LoadDescription(state);
     }
 
 
