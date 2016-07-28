@@ -56,12 +56,20 @@ div.nice-tophat {
     cursor: pointer;
 }
 
+.tech-container .tech.active  {
+    background-color: #d9e8f2;
+}
+
 .tech-container .tech.show {
     display: block;
 } 
 
 .tech-container .tech:hover {
     background-color:  #F1F1F1;
+}
+
+.tech-container .tech.active:hover {
+    background-color: #c6dcec;
 }
 
 .tech-container .Adopted {
