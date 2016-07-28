@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-    GeneratePageFromUrl();
 
     $('.control--checkbox input').on("change", function () {
         var status = $(this).data('status');
@@ -110,13 +109,5 @@ $( document ).ready(function() {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
-    function GeneratePageFromUrl()
-    {
-        var tech = getParameterByName('desc');
-        if(tech != null)
-        {
-            LoadDescription(tech);
-        }
-    }
 
 });

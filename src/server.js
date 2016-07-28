@@ -32,9 +32,22 @@ var env = nunjucks.configure(path.join( __dirname, "/views") , {
 app.use(express.static(__dirname + '/public'))
 // Our base url 
 app.get('/', function (req, res) {
+  var techData = null;
+  var category = null;
+  if(req.query.desc != null)
+  {
+      techData = jsonQuery('categories[]values[url=' + req.query.desc + ']', {
+        data: json
+      });
+     category = techData != null ? techData.parents[2].value.name : null;
+  }
+
+  var tech = tech
   var data = {
       categories : mappedCategories,
-      statusList : viewStatusList
+      statusList : viewStatusList,
+      tech : techData != null ? techData.value : null,
+      category: category
     }
   radar(res, data);
 });
