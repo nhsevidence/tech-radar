@@ -82,4 +82,29 @@ describe('Description', function(){
     assert.equal(breadcrumb, 'Category name goes here  tech status goes here'); 
   })
 
+  it('given a technology url it should show a more info link', function(){
+    var techUrl = 'Tech/url';
+
+     var data = {
+      categories : [
+        {
+            values : [
+            {
+              moreinfo : 'http://more.info',
+              url : techUrl
+            } 
+          ] 
+        }
+      ]
+    };
+
+    var html = desc(renderFn, techUrl, data);
+    let $ = cheerio.load(html);
+
+
+    var link = $('.tech-more-info').attr('href');
+    assert.equal(link, 'http://more.info'); 
+  })
+
+
 });

@@ -26,73 +26,85 @@
                     "name" : "C#",
                     "url" : "csharp",
                     "status" : 3,
-                    "desc" : "C# is one of our core languages at NICE.  We use it for a variety of applications, both web and non-web.  It is a modern, secure language with a mature development environment and good productivity tooling."
+                    "desc" : "C# is one of our core languages at NICE.  We use it for a variety of applications, both web and non-web.  It is a modern, secure language with a mature development environment and good productivity tooling.",
+                    "moreinfo" : "https://msdn.microsoft.com/en-gb/library/z1zx9t92.aspx"
                 },  
                 { 
                     "name" : "F#",
                     "url" : "fsharp",
                     "status" : 2,
-                    "desc" : "We've been trialling F# for some back-end api's and data transformation processes.  It feels familiar because its still .NET and enables a functional approach. We've enjoyed writing more concise code using it than typical C#, plus its type system is great for domain modelling."
+                    "desc" : "We've been trialling F# for some back-end api's and data transformation processes.  It feels familiar because its still .NET and enables a functional approach. We've enjoyed writing more concise code using it than typical C#, plus its type system is great for domain modelling.",
+                    "moreinfo" : "http://fsharp.org/"
                 },      
                 { 
                     "name" : "ASP.NET MVC",
                     "url" : ".net-mvc",
                     "status" : 3,
-                    "desc" : "We use ASP.NET MVC.  It's a great web framework and we understand how to use it.  We've got several applications written using this."
+                    "desc" : "We use ASP.NET MVC.  It's a great web framework and we understand how to use it.  We've got several applications written using this.",
+                    "moreinfo" : "http://www.asp.net/mvc"
                 },  
                 { 
                     "name" : "Node.js",
                     "url" : "nodejs",
                     "status" : 2,
-                    "desc" : "Node.js is server-side javascript. We are increasing using this for small websites and apps.  We like its lightweight nature and customisation potential.  It's enabling front end developers to be more involved in backend development and vice versa - boosting our development capacity.  It's got a thrivnig community with great development tools.  We are currently upskilling in this technology."
+                    "desc" : "Node.js is server-side javascript. We are increasing using this for small websites and apps.  We like its lightweight nature and customisation potential.  It's enabling front end developers to be more involved in backend development and vice versa - boosting our development capacity.  It's got a thrivnig community with great development tools.  We are currently upskilling in this technology.",
+                    "moreinfo" : "https://nodejs.org/en/"
                 },
                 { 
                     "name" : "Meteor",
                     "url" : "meteor",
                     "status" : 2,
-                    "desc" : "Meteor is a complete platform for building web and mobile apps in pure JavaScript.  It provides out of the box features like templating/binding/events/minification/testing by abstracting the implementation of these mechanisms from the developer.  The downside to this is you have restricted customisation abilities.  We've been trialling this for increased speed-to-market for a few CRUD-style single page applications."
+                    "desc" : "Meteor is a complete platform for building web and mobile apps in pure JavaScript.  It provides out of the box features like templating/binding/events/minification/testing by abstracting the implementation of these mechanisms from the developer.  The downside to this is you have restricted customisation abilities.  We've been trialling this for increased speed-to-market for a few CRUD-style single page applications.",
+                    "moreinfo" : "https://www.meteor.com/"
                 }, 
                 { 
                     "name" : "Microsoft SQL Server",
                     "url" : "sql-server",
                     "status" : 3,
-                    "desc" : "If you've got relational data, you need a relational database.  We use SQL Server and have done for a while."
+                    "desc" : "If you've got relational data, you need a relational database.  We use SQL Server and have done for a while.",
+                    "moreinfo" : "https://www.microsoft.com/en-us/cloud-platform/sql-server"
                 }, 
                 { 
                     "name" : "Microsoft Fast ESP",
                     "url" : "fast-esp",
                     "status" : 4,
-                    "desc" : "Microsoft FAST ESP is a search technology is no longer supported by Microsoft and we are in the process of retiring it in favour of more modern and supported search technologies."
+                    "desc" : "Microsoft FAST ESP is a search technology is no longer supported by Microsoft and we are in the process of retiring it in favour of more modern and supported search technologies.",
+                    "moreinfo" : "http://www.searchtechnologies.com/fast-esp-services"
                 }, 
                 { 
                     "name" : "Elastic",
                     "url" : "elastic",
                     "status" : 3,
-                    "desc" : "Elastic is a highly optimised search technology providing high availability, full-text search, document oriented datastore.  We've found success using it for server log aggregation as part of an ELK stack and also for specific application search indices.  "
+                    "desc" : "Elastic is a highly optimised search technology providing high availability, full-text search, document oriented datastore.  We've found success using it for server log aggregation as part of an ELK stack and also for specific application search indices.  ",
+                    "moreinfo" : "https://www.elastic.co/"
                 }, 
                  { 
                     "name" : "RavenDB",
                     "url" : "ravendb",
                     "status" : 3,
-                    "desc" : "A document-oriented database.  We use this for a several applications."
+                    "desc" : "A document-oriented database.  We use this for a several applications.",
+                    "moreinfo" : "https://ravendb.net/"
                 }, 
                  { 
                     "name" : "MongoDB",
                     "url" : "mongodb",
                     "status" : 2,
-                    "desc" : "A document-oriented database.  We use this for a few applications."
+                    "desc" : "A document-oriented database.  We use this for a few applications.",
+                    "moreinfo" : "https://www.mongodb.com/"
                 }, 
                  { 
                     "name" : "Stardog",
                     "url" : "stardog",
                     "status" : 2,
-                    "desc" : "We're interested in the semantic web and linked data here at NICE.  We've been trialling stardog as our graph database for storing graphs of knowledge. "
+                    "desc" : "We're interested in the semantic web and linked data here at NICE.  We've been trialling stardog as our graph database for storing graphs of knowledge. ",
+                    "moreinfo" : "http://stardog.com/"
                 }, 
                  { 
                     "name" : "Rabbit MQ",
                     "url" : "rabbit-mq",
                     "status" : 3,
-                    "desc" : "A message queue system.  We've been using Rabbit MQ to pass messages around. It works - and there's loads of mature clients for it out there."
+                    "desc" : "A message queue system.  We've been using Rabbit MQ to pass messages around. It works - and there's loads of mature clients for it out there.",
+                    "moreinfo" : "https://www.rabbitmq.com/"
                 }
               ]
           }, 
@@ -104,55 +116,64 @@
                     "name" : "Amazon Web Services",
                     "url" : "aws",
                     "status" : 3,
-                    "desc" : "Arguably the most mature cloud infrastructure provider around, we've recently migrated to this platform.  It's enabling us to scale our services along with demand and is widely supported in the development community."
+                    "desc" : "Arguably the most mature cloud infrastructure provider around, we've recently migrated to this platform.  It's enabling us to scale our services along with demand and is widely supported in the development community.",
+                    "moreinfo" : "https://aws.amazon.com"
                 },
                  { 
                     "name" : "Docker",
                     "url" : "docker",
                     "status" : 2,
-                    "desc" : "Docker is a container technology.  We've been finding Docker useful for all sorts - managing build dependancies, creating transient integration testing environments and deploying applications throught to production environments.  It's fast and we love it for providing technology agnostic build, test and deployment pipelines.    "
+                    "desc" : "Docker is a container technology.  We've been finding Docker useful for all sorts - managing build dependancies, creating transient integration testing environments and deploying applications throught to production environments.  It's fast and we love it for providing technology agnostic build, test and deployment pipelines.    ",
+                    "moreinfo" : "https://www.docker.com/"
                 },
                  { 
                     "name" : "Linux",
                     "url" : "linux",
                     "status" : 3,
-                    "desc" : "We've seen increased linux usage mainly through our use of Docker.  It's relatively new to NICE but its becoming a core part of our infrastructure platform."
+                    "desc" : "We've seen increased linux usage mainly through our use of Docker.  It's relatively new to NICE but its becoming a core part of our infrastructure platform.",
+                    "moreinfo" : "https://www.linux.com/"
                 },
                  { 
                     "name" : "Mono",
                     "url" : "mono",
                     "status" : 1,
-                    "desc" : "Mono is a cross-platform port of .NET compiler and runtime.  We've used this in combination with docker for a few apps but are starting to look at .NET Core due to its recent release and thriving development community instead."
+                    "desc" : "Mono is a cross-platform port of .NET compiler and runtime.  We've used this in combination with docker for a few apps but are starting to look at .NET Core due to its recent release and thriving development community instead.",
+                    "moreinfo" : "http://www.mono-project.com/"
                 },
                  { 
                     "name" : ".NET Core",
                     "url" : ".net-core",
                     "status" : 1,
-                    "desc" : "NET Core is a cross-platform SDK and runtime for Windows/Linux/Mac OSX.  We're looking closely at this as an alternative to Mono for running .NET apps in Docker."
+                    "desc" : "NET Core is a cross-platform SDK and runtime for Windows/Linux/Mac OSX.  We're looking closely at this as an alternative to Mono for running .NET apps in Docker.",
+                    "moreinfo" : "https://www.microsoft.com/net/core#windows"
                 },
                  { 
                     "name" : "Windows",
                     "url" : "windows",
                     "status" : 3,
-                    "desc" : "We are historically a .NET development shop so Windows is a core part of our application infrastructure."
+                    "desc" : "We are historically a .NET development shop so Windows is a core part of our application infrastructure.",
+                    "moreinfo" : "https://www.microsoft.com/en-gb/windows"
                 },
                  { 
                     "name" : "Rancher",
                     "url" : "rancher",
                     "status" : 2,
-                    "desc" : "Rancher is an open-source docker container orchistration platform.  We've found this to be easy to setup and intuitive to use.  Rancher provides service discovery, load balancing and more out of the box."
+                    "desc" : "Rancher is an open-source docker container orchistration platform.  We've found this to be easy to setup and intuitive to use.  Rancher provides service discovery, load balancing and more out of the box.",
+                    "moreinfo" : "http://rancher.com/"
                 },
                  { 
-                    "name" : "Teamcity",
+                    "name" : "Team City",
                     "url" : "teamcity",
                     "status" : 3,
-                    "desc" : "Teamcity is our continuous integration server.  It does the job well for our .NET and docker build and test pipelines."
+                    "desc" : "Teamcity is our continuous integration server.  It does the job well for our .NET and docker build and test pipelines.",
+                    "moreinfo" : "https://www.jetbrains.com/teamcity/"
                 },
                  { 
                     "name" : "Octopus Deploy",
                     "url" : "octodeploy",
                     "status" : 3,
-                    "desc" : "Octopus Deploy is the tool that we use for deployments of apps to different environments."
+                    "desc" : "Octopus Deploy is the tool that we use for deployments of apps to different environments.",
+                    "moreinfo" : "https://octopus.com"
                 }
             ]
           }
