@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (res, data) {
+module.exports = function (renderFn, data) {
   var model = { 
     title : 'NICE Tech Radar',
     categoryList : data.categories,
@@ -9,8 +9,6 @@ module.exports = function (res, data) {
      category: data.category
   };
   
-  res.render('index', model, function (err, html) {    
-    res.send(html);
-  });
+  return renderFn('index', model);
 };
 

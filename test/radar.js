@@ -1,16 +1,17 @@
 "use strict";
 
-var assert = require("assert"); // node.js core module
-var cheerio = require('cheerio');
-var res = require('./fake_res');
-var radar = require("../src/radar");
-var dataMod = require("../src/data");
+var assert = require("assert"), // node.js core module
+cheerio = require('cheerio'),
+path = require('path'),
+renderSetup = require('../src/render'),
+radar = require("../src/radar");
 
-describe('Tech radar', function(){
+var renderFn = renderSetup(path.join( __dirname, '../src/views'));
 
+describe('Results', function(){
   describe('Categories', function(){
 
-    it('should show a category with its name', function(){
+    it('should show a category with its name as header', function(){
 
       var data = {
         categories : [
@@ -20,15 +21,15 @@ describe('Tech radar', function(){
         ]
       }
 
-     	radar(res, data);
+     	var html = radar(renderFn, data);
 
-  	  let $ = cheerio.load(res.html());
+  	  let $ = cheerio.load(html);
 
       var name = $('.tech-container h4').text().trim();
       assert.equal(name, 'Category name goes here'); 
     });
 
-    it('should show multiple categories', function(){
+    it('should show multiple categories as headers', function(){
 
       var data = {
         categories : [
@@ -41,108 +42,55 @@ describe('Tech radar', function(){
           ]
       }
 
-     	radar(res, data);
+     	var html = radar(renderFn, data);
 
-  	  let $ = cheerio.load(res.html());
+  	  let $ = cheerio.load(html);
 
       var count = $('.tech-container h4').length;
       assert.equal(count, 2); 
     });
   });
 
-  describe('Status filters', function(){
-
-    it('should show each status filter with a label', function(){
-
-      var data = {
-        statusList : ['Status goes here']
-      };
-
-      radar(res, data);
-
-      let $ = cheerio.load(res.html());
-
-      var name = $('label.control').text().trim();
-      console.log(name);
-      assert.equal(name, 'Status goes here'); 
-    });
-
-    it('should show each status filter with a checkbox', function(){
+  describe('Technologies within a category', function() {
+    it('should show a technology by name', function(){
 
       var data = {
-        statusList : ['Status1']
+        categories : [{
+        	values : [
+            	{
+            		name : "Name goes here"
+              } 
+            ] 
+        }]
       };
 
-      radar(res, data);
+     	var html = radar(renderFn, data);
 
-      let $ = cheerio.load(res.html());
+  	   let $ = cheerio.load(html);
+      var name = $('.tech-name').html();
+      assert.equal(name, 'Name goes here'); 
+    })
 
-      var checkboxes = $('input[type="checkbox"]').length;
-      assert.equal(checkboxes, 1); 
-    });
-
-    it('should show multiple status filters', function(){
+    it('should show multiple technologies within a category', function(){
 
       var data = {
-        statusList : ['Status1', 'Status2']
-      };
-
-      radar(res, data);
-
-      let $ = cheerio.load(res.html());
-
-      var checkboxes = $('.control').length;
-      assert.equal(checkboxes, 2); 
-    });
-  });
-
-  describe('Data', function() {
-    it('should apply the status name to each technology using id', function(){
-
-      var statusList = [
-        {
-          id : 1,
-          name : 'Assessing'
-        }
-      ];
-
-      var categories = [
-        {               
+        categories : [{
           values : [
-            { 
-                status : 1
-            }
-          ]
-        }
-      ];
-      
+              {
+                name : "Tech1"
+              },
+              {
+                name : "Tech2"
+              }
+            ] 
+        }]
+      };
 
-      var viewModel = dataMod(categories, statusList);
+      var html = radar(renderFn, data);
 
-      assert.equal(viewModel[0].values[0].status, 'Assessing');
-    });
+       let $ = cheerio.load(html);
+      var techCount = $('.tech-name').length;
+      assert.equal(techCount, 2); 
+    })
   });
-
-/*
-  it('should show the technologies within a category', function(){
-
-    var categories = [{
-    	name : 'Name goes here'
-    	values : [
-        	{
-        		name : "Name goes here",
-                url : "",
-                status : "",
-                desc : ""
-            } 
-        ] 
-    }];
-
-   	var html = radar(app, categories);
-
-	let $ = cheerio.load(html);
-    var name = $('.tech-container h4').html();
-    assert.equal(name, 'Name goes here'); 
-  })
-  */
 });
